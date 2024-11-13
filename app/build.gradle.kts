@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.example.boardingapp"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.boardingapp"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -51,6 +51,14 @@ android {
 
 dependencies {
 
+    //--OnBoarding
+    implementation ("com.google.accompanist:accompanist-pager:0.15.0")
+    //-- Lottie
+    implementation("com.airbnb.android:lottie-compose:5.2.0")
+    //--Navigation
+    implementation("androidx.navigation:navigation-compose:2.5.3")
+    //--DataStore
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
