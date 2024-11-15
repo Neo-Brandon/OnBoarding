@@ -11,6 +11,7 @@ import androidx.navigation.compose.composable
 import com.example.boardingapp.dataStore.StoreBoarding
 import com.example.boardingapp.onBoardViews.MainOnBoarding
 import com.example.boardingapp.views.HomeView
+import com.example.boardingapp.views.SplashScreen
 
 @Composable
 fun NavManager(){
@@ -19,13 +20,17 @@ fun NavManager(){
     val store=dataStore.getStoreBoarding.collectAsState(initial = false)
 
     val navController = rememberNavController()
-    NavHost(navController=navController, startDestination = if(store.value==true) "home" else "onBoarding" )
+    NavHost(navController=navController,
+        startDestination = if(store.value==true) "home" else "Splash" )
     {
         composable("onBoarding"){
             MainOnBoarding(navController,dataStore)
         }
         composable("home"){
             HomeView(navController)
+        }
+        composable("Splash"){
+            SplashScreen(navController, store.value==true)
         }
     }
 }

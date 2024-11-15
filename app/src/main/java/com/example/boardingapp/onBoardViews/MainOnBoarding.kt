@@ -13,9 +13,7 @@ import com.example.boardingapp.dataStore.StoreBoarding
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.rememberPagerState
 
-@OptIn(ExperimentalPagerApi::class,
-    ExperimentalFoundationApi::class)
-
+@OptIn(ExperimentalPagerApi::class,ExperimentalFoundationApi::class)
 @Composable
 fun MainOnBoarding(navController: NavController, store: StoreBoarding){
     val items = ArrayList<PageData>()
@@ -23,19 +21,21 @@ fun MainOnBoarding(navController: NavController, store: StoreBoarding){
     items.add(
         PageData(
             R.raw.page1,
-            "Titulo 1",
-            "Descipcion 1"
+            titulo ="Bienvenido",
+            descripcion = "Descripcion 2 - Deslizar para continuar"
         )
     )
+
     items.add(
         PageData(R.raw.page2,
-            "Titulo 2",
-            "Descripción 2")
+            titulo = "Aplicacion Boarding",
+            descripcion = "Descripción 2 - Deslizar para continuar")
     )
+
     items.add(
         PageData(R.raw.page3,
-            "Titulo 3",
-            "Descripción 3"
+            titulo = "Su aplicación de confianza",
+            descripcion = "Pulse para continuar"
         )
     )
 
