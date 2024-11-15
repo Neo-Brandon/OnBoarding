@@ -21,21 +21,22 @@ fun MainOnBoarding(navController: NavController, store: StoreBoarding){
     items.add(
         PageData(
             R.raw.page1,
-            titulo ="Bienvenido",
-            descripcion = "Descripcion 2 - Deslizar para continuar"
+            titulo ="Bienvenido ¿Te gustan los Tacos?",
+            descripcion = "Los tacos al pastor son muy buenos - Deslizar para continuar"
         )
     )
 
     items.add(
         PageData(R.raw.page2,
-            titulo = "Aplicacion Boarding",
-            descripcion = "Descripción 2 - Deslizar para continuar")
+            titulo = "Quizas tengo algo de hambre ahora",
+            descripcion = "Programar da hambre  - Deslizar para continuar")
     )
 
     items.add(
         PageData(R.raw.page3,
             titulo = "Su aplicación de confianza",
-            descripcion = "Pulse para continuar"
+            descripcion = "Bienveido  a su taqueria de confianza" +
+                            "Pulse para continuar"
         )
     )
 

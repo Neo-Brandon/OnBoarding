@@ -30,6 +30,6 @@ fun SplashScreen(navController: NavController, store: Boolean){
         }
     }
     Box(contentAlignment = Alignment.Center, modifier = Modifier.fillMaxSize()){
-        Image(painter = painterResource(id=R.drawable.android_logo1), contentDescription = "Logo")
+        Image(painter = painterResource(id=R.drawable.taco_splash), contentDescription = "Logo")
     }
 }
